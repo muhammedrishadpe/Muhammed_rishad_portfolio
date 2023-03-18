@@ -53,3 +53,26 @@ export const projectDetails = [
         reverse: false,
     }
 ]
+
+export const navLink = [
+    {
+        id:0,
+        name: 'Home',
+        href: 'Home'
+    },
+    {
+        id:1,
+        name: 'My skills',
+        href: 'Skills'
+    },
+    {
+        id:2,
+        name: 'Projects',
+        href: 'My Projects'
+    },
+    {
+        id:3,
+        name: 'My Contact',
+        href: 'Contact'
+    }
+]
