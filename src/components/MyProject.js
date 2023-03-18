@@ -1,55 +1,50 @@
-import React from 'react'
-import {motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 // import global styles
-import {
-    PaddingContainer,
-    Heading,
-    BlueText,
-} from '../styles/Global.styled';
+import { PaddingContainer, Heading, BlueText } from "../styles/Global.styled";
 
-import { projectDetails } from '../utils/Data';
-import Project from './layout/Project';
+import { projectDetails } from "../utils/Data";
+import Project from "./layout/Project";
 
-import { fadeInTopVariant } from '../utils/variants';
+import { fadeInTopVariant } from "../utils/variants";
 
 function MyProject() {
   return (
-   <PaddingContainer
-   id="Projects"
-   top="5%"
-   bottom="5%"
-   responsiveTop="20%"
-   responsiveLeft="1rem"
-   responsiveRight="1rem"
-   >
-<Heading
-as={motion.h4} 
-variants={fadeInTopVariant}
-initial="hidden"
-whileInView= "visible"
-size="h4"
->
-    MY PROJECTS
-</Heading>
-<Heading 
-as={motion.h2} 
-variants={fadeInTopVariant}
-initial="hidden"
-whileInView= "visible"
+    <PaddingContainer
+      id="Projects"
+      top="5%"
+      bottom="5%"
+      responsiveTop="20%"
+      responsiveLeft="1rem"
+      responsiveRight="1rem"
+    >
+      <Heading
+        as={motion.h4}
+        variants={fadeInTopVariant}
+        initial="hidden"
+        whileInView="visible"
+        size="h4"
+      >
+        MY PROJECTS
+      </Heading>
+      <Heading
+        as={motion.h2}
+        variants={fadeInTopVariant}
+        initial="hidden"
+        whileInView="visible"
+        size="h2"
+      >
+        What <BlueText>I have built</BlueText>
+      </Heading>
 
-size="h2">
-    What <BlueText>I have built</BlueText>
-</Heading>
-
-{projectDetails.map((project) => (
-    <PaddingContainer top="5rem" bottom="5rem">
-        <Project key={project.id} data={project} />
+      {projectDetails.map((project) => (
+        <PaddingContainer top="5rem" bottom="5rem">
+          <Project key={project.id} data={project} />
+        </PaddingContainer>
+      ))}
     </PaddingContainer>
-))}
-
-   </PaddingContainer>
-  )
+  );
 }
 
-export default MyProject
+export default MyProject;

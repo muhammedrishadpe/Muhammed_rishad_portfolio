@@ -17,27 +17,27 @@ export const Logo = styled.p`
 
 export const MenuIcon = styled.a`
   color: ${({ theme }) => theme.colors.secondary};
-    font-size: 1.6rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-  `;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+`;
 
-  export const NavMenuContainer = styled.div`
+export const NavMenuContainer = styled.div`
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
-  background-color: ${({theme}) => theme.colors.primary_light};
+  background-color: ${({ theme }) => theme.colors.primary_light};
   z-index: 1;
-  `
+`;
 
-  export const MenuItem = styled.a`
-  color:#fff;
+export const MenuItem = styled.a`
+  color: #fff;
   font-size: 2.5rem;
-  margin-top:3rem;
-  cursor:pointer;
+  margin-top: 3rem;
+  cursor: pointer;
   text-decoration: none;
-  `
+`;

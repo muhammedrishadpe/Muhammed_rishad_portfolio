@@ -1,5 +1,5 @@
 import React from "react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 // import global styles
 
 import {
@@ -17,28 +17,36 @@ import { ContactForm, FormInput, FormLabel } from "../styles/Footer.styled";
 const Footer = () => {
   return (
     <PaddingContainer id="Contact" top="5%" bottom="10%">
-      <Heading as={motion.h4}
-      variants= {fadeInBottomVariant}
-      initial="hidden"
-      whileInView="visible"
-      size="h4" align="center">
+      <Heading
+        as={motion.h4}
+        variants={fadeInBottomVariant}
+        initial="hidden"
+        whileInView="visible"
+        size="h4"
+        align="center"
+      >
         MY CONTACT
       </Heading>
 
-      <Heading as={motion.h2}
-      variants={fadeInBottomVariant}
-      initial= "hidden"
-      whileInView="visible"
-      size="h2" align="center" top="0.5rem">
+      <Heading
+        as={motion.h2}
+        variants={fadeInBottomVariant}
+        initial="hidden"
+        whileInView="visible"
+        size="h2"
+        align="center"
+        top="0.5rem"
+      >
         Contact <BlueText>Me Here</BlueText>
       </Heading>
 
       <PaddingContainer top="3rem">
         <FlexContainer justify="center">
-          <ContactForm as={motion.form}
-          variants={fadeInBottomVariant}
-          initial="hidden"
-          whileInView="visible"
+          <ContactForm
+            as={motion.form}
+            variants={fadeInBottomVariant}
+            initial="hidden"
+            whileInView="visible"
           >
             <PaddingContainer bottom="2rem">
               <FormLabel>Name:</FormLabel>
@@ -55,19 +63,14 @@ const Footer = () => {
               <FormInput as="textarea" placeholder="Enter your message" />
             </PaddingContainer>
 
-<FlexContainer justify="center"
-responsiveFlex
->
-<Button>Send  Message</Button>
-</FlexContainer>
-
+            <FlexContainer justify="center" responsiveFlex>
+              <Button>Send Message</Button>
+            </FlexContainer>
           </ContactForm>
         </FlexContainer>
       </PaddingContainer>
     </PaddingContainer>
-
-    
   );
-}
+};
 
 export default Footer;

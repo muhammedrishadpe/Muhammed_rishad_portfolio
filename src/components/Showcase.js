@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 //import globel styles
 import {
-  paddingContainer,
   FlexContainer,
   Heading,
   ParaText,
@@ -33,7 +32,7 @@ const Showcase = () => {
       id="Home"
       left="3%"
       right="10%"
-      top="15%"
+      top="18%"
       bottom="10%"
       responsiveLeft="1rem"
       responsiveRight="1rem"
@@ -98,16 +97,16 @@ const Showcase = () => {
               <img src={ShowcaseImg} alt="showcase" />
             </ShowcaseImageCard>
             <Particle
-            as={motion.img}
-            animate={{
-              x: [0, 100, 0],
-              rotate: 360,
-              scale: [1,0.5,1]
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-            }}
+              as={motion.img}
+              animate={{
+                x: [0, 100, 0],
+                rotate: 360,
+                scale: [1, 0.5, 1],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+              }}
               src={BackgroundImg}
               alt="particle"
               top="-80px"
@@ -115,16 +114,16 @@ const Showcase = () => {
               rotate="60deg"
             />
             <Particle
-             as={motion.img}
-             animate={{
-               y: [0, -100, 0],
-               rotate: 360,
-               scale: [1,0.9,1]
-             }}
-             transition={{
-               duration: 15,
-               repeat: Infinity,
-             }}
+              as={motion.img}
+              animate={{
+                y: [0, -100, 0],
+                rotate: 360,
+                scale: [1, 0.9, 1],
+              }}
+              transition={{
+                duration: 15,
+                repeat: Infinity,
+              }}
               src={BackgroundImg}
               alt="particle"
               top="50px"
@@ -132,16 +131,16 @@ const Showcase = () => {
               rotate="0deg"
             />
             <Particle
-             as={motion.img}
-             animate={{
-               x: [0, 100, 0],
-               rotate: 360,
-               scale: [1,0.5,1]
-             }}
-             transition={{
-               duration: 20,
-               repeat: Infinity,
-             }}
+              as={motion.img}
+              animate={{
+                x: [0, 100, 0],
+                rotate: 360,
+                scale: [1, 0.5, 1],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+              }}
               src={BackgroundImg}
               alt="particle"
               bottom="10px"
