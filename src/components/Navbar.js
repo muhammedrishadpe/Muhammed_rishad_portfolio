@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 // import global styles
 
@@ -18,12 +18,23 @@ import { theme } from "../utils/Theme";
 import NavMenu from "./layout/NavMenu";
 function Navbar() {
 const [openMenu, setOpenMenu] = useState(false);
+const [sticky, setSticky] = useState(false);
 
-  return (
-    <NavbarContainer bgColor="transparent">
-      <PaddingContainer top="1.2rem" bottom="1.2rem">
+useEffect(() => {
+    // onScroll function
+    const onScroll = () => {
+        window.pageYOffset > 50 ? setSticky(true) : setSticky(false);
+    }
+    window.addEventListener('scroll', onscroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+})
+
+  return (  
+    <NavbarContainer bgColor={sticky ? theme.colors.primary : 'transparent'}>
+      <PaddingContainer top="1.2rem" bottom="1.2rem" responsiveLeft="1rem" responsiveRight="1rem">
         <Container>
-          <FlexContainer justify="space-between">
+          <FlexContainer justify="space-between" responsiveFlex>
             {/* --left-logo-- */}
             <Logo>
               R<BlueText>H</BlueText>
@@ -41,6 +52,10 @@ const [openMenu, setOpenMenu] = useState(false);
 {openMenu && <NavMenu setOpenMenu={setOpenMenu} />}
 
       </PaddingContainer>
+
+
+      {/* --menu-items-- */}
+
     </NavbarContainer>
   );
 }

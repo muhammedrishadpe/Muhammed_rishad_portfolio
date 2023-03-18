@@ -50,7 +50,7 @@ export const projectDetails = [
         tech_stack: ['HTML','CSS','Javascript'],
         project_img: Project2,
         project_url:'https://muhammedrishadpe.github.io/Chobani/',
-        reverse: false,
+        reverse: true,
     }
 ]
 

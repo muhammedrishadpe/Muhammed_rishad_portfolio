@@ -1,4 +1,5 @@
 import React from "react";
+import {motion} from 'framer-motion';
 
 //import global style
 import {
@@ -12,15 +13,26 @@ import {
 
 // import my skills styles
 import { SkillsCard, SkillsCardContainer } from "../styles/MySkills.styled";
-
+import { fadeInLeftVariant, fadeInRightVariant} from '../utils/variants';
 import { Skills } from "../utils/Data";
 
 function MySkills() {
   return (
-    <PaddingContainer id="Skills" top="10%" bottom="10%">
-      <FlexContainer fullWidthChild>
+    <PaddingContainer
+      id="Skills"
+      top="10%"
+      bottom="10%"
+      responsiveLeft="1rem"
+      responsiveRight="1rem"
+    >
+      <FlexContainer responsiveFlex responsiveDirection="column-reverse" fullWidthChild>
         {/* --left-section */}
-        <SkillsCardContainer>
+        <SkillsCardContainer  
+        as={motion.div}
+        variants={fadeInLeftVariant}
+        initial="hidden"
+        whileInView="visible"
+        >
           {Skills.map((skill) => (
             <SkillsCard>
               <IconContainer size="5rem" color="blue">
@@ -35,7 +47,12 @@ function MySkills() {
         </SkillsCardContainer>
         {/* --right-section-- */}
 
-        <div>
+        <motion.div
+        variants={fadeInRightVariant}
+        initial="hidden"
+        whileInView="visible"
+        
+        >
           <Heading as="h4" size="h4">
             MY SKILLS
           </Heading>
@@ -59,7 +76,7 @@ function MySkills() {
             businesses. With my experience and expertise, I deliver results that
             exceed expectations.
           </ParaText>
-        </div>
+        </motion.div>
       </FlexContainer>
     </PaddingContainer>
   );

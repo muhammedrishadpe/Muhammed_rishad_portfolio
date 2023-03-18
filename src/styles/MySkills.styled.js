@@ -5,6 +5,14 @@ display: grid;
 grid-template-columns: auto auto;
 grid-gap: 2rem;
 paddding: 0 5%;
+
+
+
+@media(max-width: ${({ theme}) => theme.breakpoints.mobile}) {
+   display:block;
+   padding:0;
+}
+
 `
 
 export const SkillsCard = styled.div`
@@ -16,4 +24,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 background-color:${({theme}) => theme.colors.primary_light};
+
+
+@media(max-width: ${({ theme}) => theme.breakpoints.mobile}) {
+width:100%;
+margin-top: 2rem; 
+}
 `

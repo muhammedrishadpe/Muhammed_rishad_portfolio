@@ -21,7 +21,9 @@ import Project1 from '../../assets/Project1.png';
 
 const Project = ({ data }) => {
   return (
-    <FlexContainer fullWidthChild>
+    <FlexContainer
+    direction = {data.reverse ? 'row-reverse' : false}
+    fullWidthChild>
       {/* --left-section-project--- */}
       <div>
         <FlexContainer align="center" gap="1rem">
@@ -53,7 +55,7 @@ const Project = ({ data }) => {
 
 {/* --- right-section-project-image-- */}
       <div>
-      <ProjectImageContainer justify= "flex-end">
+      <ProjectImageContainer justify= {data.reverse ? 'flex-start' : 'flex-end'}>
         <ProjectImage src={data.project_img} alt={data.projecct_name} />
       </ProjectImageContainer>
       </div>
