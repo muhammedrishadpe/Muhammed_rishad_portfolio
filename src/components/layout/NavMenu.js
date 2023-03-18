@@ -1,5 +1,5 @@
 import React from "react";
-
+import {motion} from 'framer-motion';
 //import globel styles
 
 import { PaddingContainer, FlexContainer } from "../../styles/Global.styled";
@@ -11,10 +11,19 @@ import {
 
 import { AiOutlineClose } from "react-icons/ai";
 import { navLink } from "../../utils/Data";
+import { slideInLeft } from "../../utils/variants";
+
 
 const NavMenu = ({ setOpenMenu }) => {
   return (
-    <NavMenuContainer>
+    <NavMenuContainer
+    as={motion.div}
+    variants={slideInLeft}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
+    
+    >
       {/* --close-button-- */}
       <PaddingContainer left="5%" right="5%" top="2rem">
         <FlexContainer justify="flex-end" responsiveFlex>

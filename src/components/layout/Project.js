@@ -1,4 +1,5 @@
 import React from "react";
+import {motion} from 'framer-motion';
 
 import {
   PaddingContainer,
@@ -17,7 +18,7 @@ import { ProjectImage, ProjectImageContainer, TechStackCard } from "../../styles
 
 import { FaGithub } from "react-icons/fa";
 
-import Project1 from '../../assets/Project1.png';
+import { fadeInLeftVariant , fadeInRightVariant } from "../../utils/variants";
 
 const Project = ({ data }) => {
   return (
@@ -25,7 +26,11 @@ const Project = ({ data }) => {
     direction = {data.reverse ? 'row-reverse' : false}
     fullWidthChild>
       {/* --left-section-project--- */}
-      <div>
+      <motion.div
+      variants= {data.reverse ? fadeInRightVariant : fadeInLeftVariant}
+      initial="hidden"
+      whileInView="visible"
+      >
         <FlexContainer align="center" gap="1rem">
           <Heading as="h3" size="h3" bottom="1rem">
            {data.projecct_name}
@@ -50,12 +55,17 @@ const Project = ({ data }) => {
         </ParaText>
 
         <Button>Visit Website</Button>
-      </div>
+      </motion.div>
 
 
 {/* --- right-section-project-image-- */}
       <div>
-      <ProjectImageContainer justify= {data.reverse ? 'flex-start' : 'flex-end'}>
+      <ProjectImageContainer 
+      as={motion.div}
+      variants = {data.reverse ? fadeInLeftVariant : fadeInRightVariant}
+      initial="hidden"
+      whileInView='visible'
+      justify= {data.reverse ? 'flex-start' : 'flex-end'}>
         <ProjectImage src={data.project_img} alt={data.projecct_name} />
       </ProjectImageContainer>
       </div>
