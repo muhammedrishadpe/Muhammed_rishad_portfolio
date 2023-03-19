@@ -8,7 +8,7 @@ export const Skills = [
   {
     id: 0,
     tech: "React Js",
-    icon: <FaReact />,
+    icon: <FaReact  />,
   },
   {
     id: 1,
@@ -18,13 +18,13 @@ export const Skills = [
   {
     id: 2,
     tech: "Node Js",
-    icon: <FaNode />,
+    icon: <FaNode  />,
   },
 
   {
     id: 3,
     tech: "Javascript",
-    icon: <SiJavascript />,
+    icon: <SiJavascript  />,
   },
   // {
   //     id:4,

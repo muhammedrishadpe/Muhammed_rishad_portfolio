@@ -58,7 +58,12 @@ const Project = ({ data }) => {
           {data.project_desc}
         </ParaText>
 
-        <Button>Visit Website</Button>
+        <Button 
+        onClick={() => {
+          window.open(data.project_url);
+        }}
+        
+        >Visit Website</Button>
       </motion.div>
 
       {/* --- right-section-project-image-- */}

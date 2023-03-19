@@ -18,6 +18,7 @@ export const ShowcaseImageCard = styled.div`
 `;
 
 export const Particle = styled.img`
+
   position: absolute;
   top: ${({ top }) => top};
   left: ${({ left }) => left};

@@ -108,6 +108,8 @@ const Showcase = () => {
                 repeat: Infinity,
               }}
               src={BackgroundImg}
+              width="100px"
+              height="80px"
               alt="particle"
               top="-80px"
               left="20px"
@@ -125,6 +127,8 @@ const Showcase = () => {
                 repeat: Infinity,
               }}
               src={BackgroundImg}
+              width="100px"
+              height="80px"
               alt="particle"
               top="50px"
               right="-70px"
@@ -142,6 +146,8 @@ const Showcase = () => {
                 repeat: Infinity,
               }}
               src={BackgroundImg}
+              width="100px"
+              height="80px"
               alt="particle"
               bottom="10px"
               left="-70px"

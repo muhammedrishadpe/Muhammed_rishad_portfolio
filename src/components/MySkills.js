@@ -39,7 +39,7 @@ function MySkills() {
         >
           {Skills.map((skill) => (
             <SkillsCard>
-              <IconContainer size="5rem" color="blue">
+              <IconContainer size="5rem" color="white">
                 {skill.icon}
               </IconContainer>
 
